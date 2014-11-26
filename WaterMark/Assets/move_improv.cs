@@ -19,18 +19,23 @@ public class move_improv : MonoBehaviour {
 		// Movement mit Trägheit, momentan bewegt sich der Rigidbody aber auf einer Achse
 		// unabhängig von der Ausrichtung :/
 		if(Input.GetKey(KeyCode.UpArrow)){
-			rigidbody.AddForce(Vector3.forward * vor, ForceMode.Force);
+			rigidbody.AddForce(transform.forward * vor * Time.deltaTime, ForceMode.Force);
 			if(Input.GetKey(KeyCode.LeftArrow))
-				rigidbody.AddTorque(Vector3.up * -rota, ForceMode.Force);
+				rigidbody.AddTorque(transform.up * -rota * Time.deltaTime, ForceMode.Force);
 			if(Input.GetKey(KeyCode.RightArrow))
-				rigidbody.AddTorque (Vector3.up * rota, ForceMode.Force);}
+				rigidbody.AddTorque (transform.up * rota * Time.deltaTime, ForceMode.Force);}
 
 		if(Input.GetKey(KeyCode.DownArrow)){
-			rigidbody.AddForce(-Vector3.forward * (vor/2), ForceMode.Force);
+			rigidbody.AddForce(-transform.forward * (vor/2) * Time.deltaTime, ForceMode.Force);
 		if(Input.GetKey(KeyCode.LeftArrow))
-				rigidbody.AddTorque(Vector3.up * -rota, ForceMode.Force);
+				rigidbody.AddTorque(transform.up * rota * Time.deltaTime, ForceMode.Force);
 		if(Input.GetKey(KeyCode.RightArrow))
-				rigidbody.AddTorque (Vector3.up * rota, ForceMode.Force);}
+				rigidbody.AddTorque (transform.up * -rota * Time.deltaTime, ForceMode.Force);}
+
+		if(Input.GetKey(KeyCode.LeftArrow))
+			rigidbody.AddTorque(transform.up * (-rota/2) * Time.deltaTime, ForceMode.Force);
+		if(Input.GetKey (KeyCode.RightArrow))
+			rigidbody.AddTorque (transform.up * (rota/2) * Time.deltaTime, ForceMode.Force);
 }
 
 }
