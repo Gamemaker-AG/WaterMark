@@ -39,15 +39,22 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Programme/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Programme/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\move.cs" />
-     <Compile Include="Assets\move_improv.cs" />
+     <Compile Include="Assets\Blue Ship\blue_move.cs" />
+     <Compile Include="Assets\Blue Ship\blue_move_improvement.cs" />
+     <Compile Include="Assets\Blue Ship\blue_shot_hit.cs" />
+     <Compile Include="Assets\Blue Ship\shoot_blue.cs" />
+     <Compile Include="Assets\Red Ship\red_move.cs" />
+     <Compile Include="Assets\Red Ship\red_move_improvement.cs" />
+     <Compile Include="Assets\Red Ship\red_shot_hit.cs" />
+     <Compile Include="Assets\Red Ship\shoot_red.cs" />
+     <Compile Include="Assets\cBallDespawn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

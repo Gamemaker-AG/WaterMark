@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class move_improv : MonoBehaviour {
+public class red_move_improvement : MonoBehaviour {
 
 	public float vor = 1f;
 	public float zur = 1f;
 	public float rota = 1f;
-
-
+	
+	
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
-
+	
 	void FixedUpdate () 
 	{
 		// Movement mit Trägheit
@@ -23,18 +23,18 @@ public class move_improv : MonoBehaviour {
 				rigidbody.AddTorque(transform.up * -rota * Time.deltaTime, ForceMode.Force);
 			if(Input.GetKey(KeyCode.RightArrow))
 				rigidbody.AddTorque (transform.up * rota * Time.deltaTime, ForceMode.Force);}
-
+		
 		if(Input.GetKey(KeyCode.DownArrow)){
 			rigidbody.AddForce(-transform.forward * (vor/2) * Time.deltaTime, ForceMode.Force);
-		if(Input.GetKey(KeyCode.LeftArrow))
+			if(Input.GetKey(KeyCode.LeftArrow))
 				rigidbody.AddTorque(transform.up * rota * Time.deltaTime, ForceMode.Force);
-		if(Input.GetKey(KeyCode.RightArrow))
+			if(Input.GetKey(KeyCode.RightArrow))
 				rigidbody.AddTorque (transform.up * -rota * Time.deltaTime, ForceMode.Force);}
-
+		
 		if(Input.GetKey(KeyCode.LeftArrow))
 			rigidbody.AddTorque(transform.up * (-rota/2) * Time.deltaTime, ForceMode.Force);
 		if(Input.GetKey (KeyCode.RightArrow))
 			rigidbody.AddTorque (transform.up * (rota/2) * Time.deltaTime, ForceMode.Force);
-}
-
+	}
+	
 }
