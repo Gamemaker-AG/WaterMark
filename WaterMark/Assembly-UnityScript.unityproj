@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{85050081-6E9A-EE2B-9424-03CC7706353B}</ProjectGuid>
+	<ProjectGuid>{E0E3F20F-3DF5-3687-603B-67CBD5CE103B}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,19 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Blue Ship\blue_move.cs" />
-     <Compile Include="Assets\Blue Ship\blue_move_improvement.cs" />
-     <Compile Include="Assets\Blue Ship\blue_shot_hit.cs" />
-     <Compile Include="Assets\Blue Ship\shoot_blue.cs" />
-     <Compile Include="Assets\Red Ship\red_move.cs" />
-     <Compile Include="Assets\Red Ship\red_move_improvement.cs" />
-     <Compile Include="Assets\Red Ship\red_shot_hit.cs" />
-     <Compile Include="Assets\Red Ship\shoot_red.cs" />
-     <Compile Include="Assets\cBallDespawn.cs" />
-     <Compile Include="Assets\move_improv.cs" />
-     <Compile Include="Assets\shooting.cs" />
-     <Compile Include="Assets\start.cs" />
+     <Compile Include="Assets\Water3Test\NewShipController.js" />
+     <None Include="Assets\Water3Test\Standard Assets\Water (Pro Only)\Water3\Sources\Shaders\FX-Water3.shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Water3Test\Standard Assets\Water (Pro Only)\Sources\Shaders\RiverWaterVertexColor.shader" />
+     <None Include="Assets\Water3Test\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\Water3Test\Standard Assets\Water (Pro Only)\Water3\Sources\Shaders\Water3Underwater.shader" />
+     <None Include="Assets\Water3Test\Standard Assets\Water (Pro Only)\Sources\Shaders\RiverWater.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
