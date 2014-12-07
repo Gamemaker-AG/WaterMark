@@ -5,6 +5,7 @@ public class shooting : MonoBehaviour {
 
 	public Rigidbody projectile;
 	public float speed = 20;
+	public float gravity = 1;
 	
 	// Update is called once per frame
 	void Update ()
@@ -12,15 +13,15 @@ public class shooting : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0))
 		{
 			Rigidbody instantiatedProjectile = Instantiate(projectile
-			                                               ,new Vector3(transform.position.x +0.5f,transform.position.y +0.4f , transform.position.z)
+			                                               ,new Vector3(transform.position.x +0.5f,transform.position.y +1 , transform.position.z)
 			                                               ,transform.rotation)as Rigidbody;
-			instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(speed, 0, 0));
+			instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(speed, -gravity, 0));
 
 		}
 		if (Input.GetMouseButtonDown(1))
 		{
-			Rigidbody instantiatedProjectile = Instantiate(projectile,new Vector3(transform.position.x -0.5f,transform.position.y +0.4f , transform.position.z),transform.rotation)as Rigidbody;
-			instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(-speed, 0, 0));
+			Rigidbody instantiatedProjectile = Instantiate(projectile,new Vector3(transform.position.x -0.5f,transform.position.y +1 , transform.position.z),transform.rotation)as Rigidbody;
+			instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(-speed, -gravity, 0));
 
 		}
 
