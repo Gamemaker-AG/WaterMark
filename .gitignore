@@ -14,7 +14,6 @@
 /*.booproj
 
 **/UnityVS.*
-#that doesn't seem to do anything...
 
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
@@ -23,7 +22,4 @@ sysinfo.txt
 /ProjectSettings/EditorBuildSettings.asset
 
 #ignoring backup-saves of blend-files
-**/*.blend1
-**/*.blend1.meta
-**/*.blend2
-**/*.blend2.meta
+*.blend*
