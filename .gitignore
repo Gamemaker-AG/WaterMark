@@ -22,4 +22,7 @@ sysinfo.txt
 /ProjectSettings/EditorBuildSettings.asset
 
 #ignoring backup-saves of blend-files
-*.blend*
+*.blend1
+*.blend1.meta
+*.blend2
+*.blend2.meta
