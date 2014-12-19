@@ -77,7 +77,7 @@ Material:
       data:
         first:
           name: _WaveScale
-        second: .0772472993
+        second: .0702830106
       data:
         first:
           name: _Highlight
@@ -117,12 +117,8 @@ Material:
         second: {r: 0, g: 0, b: 0, a: .400000006}
       data:
         first:
-          name: _BumpMap_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
-      data:
-        first:
           name: _horizonColor
-        second: {r: .779411793, g: .725659251, b: 0, a: .623529434}
+        second: {r: .694117665, g: .749019623, b: .53725493, a: .623529434}
       data:
         first:
           name: _ColorControl_ST
@@ -133,8 +129,12 @@ Material:
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
+          name: _BumpMap_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
           name: WaveSpeed
-        second: {r: 5.36000013, g: 2.01999998, b: -2.4000001, a: -1.62}
+        second: {r: 6.53000021, g: 1.74000001, b: -3.11999989, a: -1.62}
       data:
         first:
           name: BumpParm

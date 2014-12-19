@@ -19,7 +19,7 @@ public class move_improv : MonoBehaviour
 	}
 	
 
-	void Update () 
+	void FixedUpdate () 
 	{
 		// Movement mit Trägheit, momentan bewegt sich der Rigidbody aber auf einer Achse
 		// unabhängig von der Ausrichtung :/
