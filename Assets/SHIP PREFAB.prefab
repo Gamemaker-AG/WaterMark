@@ -10,11 +10,9 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 95: {fileID: 9500000}
-  - 114: {fileID: 11400000}
-  - 65: {fileID: 6500000}
   - 54: {fileID: 5400000}
-  - 153: {fileID: 15300000}
+  - 136: {fileID: 13600000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: SHIP PREFAB
   m_TagString: Untagged
@@ -28,8 +26,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 1, y: 4.37113883e-08, z: 4.37113883e-08, w: 1.91068547e-15}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: -4.37113847e-08}
+  m_LocalPosition: {x: 7.69000006, y: 6.53000021, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -69,25 +67,13 @@ Rigidbody:
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_Drag: 2
+  m_AngularDrag: 5
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
---- !u!65 &6500000
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.59722197, y: 1.65113294, z: 3.00044012}
-  m_Center: {x: 0, y: -.825566471, z: .499779999}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -114,105 +100,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e8e12e01b05ba4a931d8a36435ce4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vor: 500
-  zur: 400
-  rota: 80
+  vor: 1500
+  zur: 1400
+  rota: 150
   Up: 0
   Down: 0
   Left: 0
   Right: 0
---- !u!153 &15300000
-ConfigurableJoint:
+--- !u!136 &13600000
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_SecondaryAxis: {x: 0, y: 1, z: 0}
-  m_XMotion: 2
-  m_YMotion: 0
-  m_ZMotion: 2
-  m_AngularXMotion: 0
-  m_AngularYMotion: 2
-  m_AngularZMotion: 0
-  m_LinearLimit:
-    limit: 0
-    bounciness: 0
-    spring: 0
-    damper: 0
-  m_LowAngularXLimit:
-    limit: 0
-    bounciness: 0
-    spring: 0
-    damper: 0
-  m_HighAngularXLimit:
-    limit: 0
-    bounciness: 0
-    spring: 0
-    damper: 0
-  m_AngularYLimit:
-    limit: 0
-    bounciness: 0
-    spring: 0
-    damper: 0
-  m_AngularZLimit:
-    limit: 0
-    bounciness: 0
-    spring: 0
-    damper: 0
-  m_TargetPosition: {x: 0, y: 0, z: 0}
-  m_TargetVelocity: {x: 0, y: 0, z: 0}
-  m_XDrive:
-    serializedVersion: 2
-    mode: 0
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.40282347e+38
-  m_YDrive:
-    serializedVersion: 2
-    mode: 0
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.40282347e+38
-  m_ZDrive:
-    serializedVersion: 2
-    mode: 0
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.40282347e+38
-  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
-  m_RotationDriveMode: 0
-  m_AngularXDrive:
-    serializedVersion: 2
-    mode: 0
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.40282347e+38
-  m_AngularYZDrive:
-    serializedVersion: 2
-    mode: 0
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.40282347e+38
-  m_SlerpDrive:
-    serializedVersion: 2
-    mode: 0
-    positionSpring: 0
-    positionDamper: 0
-    maximumForce: 3.40282347e+38
-  m_ProjectionMode: 0
-  m_ProjectionDistance: .100000001
-  m_ProjectionAngle: 5
-  m_ConfiguredInWorldSpace: 0
-  m_SwapBodies: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .758560419
+  m_Height: 3.03999996
+  m_Direction: 2
+  m_Center: {x: 0, y: -.660000026, z: .319999993}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

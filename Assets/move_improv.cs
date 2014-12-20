@@ -19,32 +19,31 @@ public class move_improv : MonoBehaviour
 	}
 	
 
-	void FixedUpdate () 
+	void Update () 
 	{
-		// Movement mit Trägheit, momentan bewegt sich der Rigidbody aber auf einer Achse
-		// unabhängig von der Ausrichtung :/
+		// Movement mit Trägheit
 		if(Input.GetKey(Up))
 		{
 			rigidbody.AddForce(transform.forward * vor * Time.deltaTime, ForceMode.Force);
+			if(Input.GetKey(Left))
+				rigidbody.AddTorque(transform.up * rota * Time.deltaTime, ForceMode.Force);
+			if(Input.GetKey(Right))
+				rigidbody.AddTorque (transform.up * -rota * Time.deltaTime, ForceMode.Force);
+		}
+
+		if(Input.GetKey(Down))
+		{
+			rigidbody.AddForce(-transform.forward * (zur) * Time.deltaTime, ForceMode.Force);
 			if(Input.GetKey(Left))
 				rigidbody.AddTorque(transform.up * -rota * Time.deltaTime, ForceMode.Force);
 			if(Input.GetKey(Right))
 				rigidbody.AddTorque (transform.up * rota * Time.deltaTime, ForceMode.Force);
 		}
 
-		if(Input.GetKey(Down))
-		{
-			rigidbody.AddForce(-transform.forward * (vor) * Time.deltaTime, ForceMode.Force);
 		if(Input.GetKey(Left))
-				rigidbody.AddTorque(transform.up * rota * Time.deltaTime, ForceMode.Force);
-		if(Input.GetKey(Right))
-				rigidbody.AddTorque (transform.up * -rota * Time.deltaTime, ForceMode.Force);
-		}
-
-		if(Input.GetKey(Left))
-			rigidbody.AddTorque(transform.up * (-rota) * Time.deltaTime, ForceMode.Force);
+			rigidbody.AddTorque(transform.up * (rota/2) * Time.deltaTime, ForceMode.Force);
 		if(Input.GetKey (Right))
-			rigidbody.AddTorque (transform.up * (rota) * Time.deltaTime, ForceMode.Force);
+			rigidbody.AddTorque (transform.up * (-rota/2) * Time.deltaTime, ForceMode.Force);
 	}
 
 }
