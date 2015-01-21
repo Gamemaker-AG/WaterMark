@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 49aeb51a4f186f9448be216a9a1d11ff
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
     100002: Cannon-lp
@@ -29,6 +29,7 @@ ModelImporter:
     100046: Circle_MeshPart7
     100048: Circle_MeshPart8
     100050: Circle_MeshPart9
+    100052: Cannon-lod_med
     400000: //RootNode
     400002: Cannon-lp
     400004: Circle
@@ -55,6 +56,7 @@ ModelImporter:
     400046: Circle_MeshPart7
     400048: Circle_MeshPart8
     400050: Circle_MeshPart9
+    400052: Cannon-lod_med
     2300000: Cannon-lp
     2300002: Circle_001
     2300004: Circle_002
@@ -78,6 +80,7 @@ ModelImporter:
     2300040: Circle_MeshPart7
     2300042: Circle_MeshPart8
     2300044: Circle_MeshPart9
+    2300046: Cannon-lod_med
     3300000: Cannon-lp
     3300002: Circle_001
     3300004: Circle_002
@@ -101,6 +104,7 @@ ModelImporter:
     3300040: Circle_MeshPart7
     3300042: Circle_MeshPart8
     3300044: Circle_MeshPart9
+    3300046: Cannon-lod_med
     4300000: Cannon-lp
     4300002: Circle_004
     4300004: Circle_003_MeshPart0
@@ -124,6 +128,7 @@ ModelImporter:
     4300040: Circle_MeshPart14
     4300042: Circle_MeshPart15
     4300044: Circle_MeshPart16
+    4300046: Cannon-lod_med
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -134,7 +139,6 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -178,5 +182,4 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
-  additionalBone: 0
   userData: 
