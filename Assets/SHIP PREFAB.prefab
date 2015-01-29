@@ -10,9 +10,12 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 54: {fileID: 5400000}
-  - 136: {fileID: 13600000}
+  - 95: {fileID: 9500002}
   - 114: {fileID: 11400000}
+  - 54: {fileID: 5400000}
+  - 114: {fileID: 11400002}
+  - 65: {fileID: 6500000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: SHIP PREFAB
   m_TagString: Untagged
@@ -26,8 +29,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -1, y: -4.37113883e-08, z: 4.37113883e-08, w: 1.91068547e-15}
-  m_LocalPosition: {x: 7.69000006, y: 6.53000021, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,14 +70,41 @@ Rigidbody:
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 2
-  m_AngularDrag: 5
-  m_UseGravity: 0
+  m_Drag: 5
+  m_AngularDrag: 2
+  m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 84
+  m_Interpolate: 0
+  m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6500000
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.59722197, y: 1.65113497, z: 3.00043917}
+  m_Center: {x: 0, y: .82556653, z: -.499780476}
 --- !u!95 &9500000
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 96cdd53c045bb10438e32d2551fc56d4, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9500002
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -101,25 +131,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vor: 1500
-  zur: 1400
+  zur: 1000
   rota: 150
   Up: 0
   Down: 0
   Left: 0
   Right: 0
---- !u!136 &13600000
-CapsuleCollider:
+--- !u!114 &11400002
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .758560419
-  m_Height: 3.03999996
-  m_Direction: 2
-  m_Center: {x: 0, y: -.660000026, z: .319999993}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d592683d6bf7e4780db9263041a6b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpwardForce: 12.7200003
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da0c1acf9d50894c98f105cbc608481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acc: 2000
+  torque: 75
+  Up: 0
+  Down: 0
+  Left: 0
+  Right: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

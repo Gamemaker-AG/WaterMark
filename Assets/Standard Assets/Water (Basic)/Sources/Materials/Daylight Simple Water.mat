@@ -77,7 +77,7 @@ Material:
       data:
         first:
           name: _WaveScale
-        second: .0493901521
+        second: .0408928581
       data:
         first:
           name: _Highlight
@@ -109,6 +109,14 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
+          name: _MainTex_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
           name: _SpecColor
         second: {r: 0, g: 0, b: 0, a: .400000006}
       data:
@@ -119,10 +127,6 @@ Material:
         first:
           name: WaveSpeed
         second: {r: 8.11999989, g: 1.74000001, b: -7, a: -1.62}
-      data:
-        first:
-          name: _MainTex_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
           name: _ColorControl_ST
