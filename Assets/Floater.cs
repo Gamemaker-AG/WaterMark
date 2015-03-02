@@ -12,8 +12,7 @@ public class Floater : MonoBehaviour
 
     //Buoyancy stuff
     public float waterLevel, floatHeight, bounceDamp;
-    public Vector3 buoyancyCentreOffset;
-    //public Vector3[] ForcePoints; // to be continued ...
+    public Vector3[] buoyancyCentreOffsets;
 
     // Use this for initialization
     void Start()
@@ -34,19 +33,25 @@ public class Floater : MonoBehaviour
             Debug.DrawLine(ray.origin, hit.point);
             waterLevel = hit.point.y;
         }
-
+        else
+        {
+            waterLevel = -Mathf.Infinity;
+        }
     }
 
 
     void FixedUpdate()
     {
-        Vector3 actionPoint = transform.position + transform.TransformDirection(buoyancyCentreOffset);
-        float forceFactor = 1f - ((actionPoint.y - waterLevel) / floatHeight);
-
-        if (forceFactor > 0f)
+        foreach (Vector3 offsetPoint in buoyancyCentreOffsets)
         {
-            Vector3 uplift = -Physics.gravity * (forceFactor - rigidbody.velocity.y * bounceDamp);
-            rigidbody.AddForceAtPosition(uplift, actionPoint);
+            Vector3 actionPoint = transform.position + transform.TransformDirection(offsetPoint);
+            float forceFactor = 1f - ((actionPoint.y - waterLevel) / floatHeight);
+
+            if (forceFactor > 0)
+            {
+                Vector3 uplift = -Physics.gravity * (forceFactor - rigidbody.velocity.y * bounceDamp);
+                rigidbody.AddForceAtPosition(uplift / buoyancyCentreOffsets.Length, actionPoint);
+            }
         }
     }
 }
