@@ -101,7 +101,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 391685994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a2841878914e489abe7d3a43a5e0578, type: 3}
   m_Name: 
@@ -177,10 +177,10 @@ Rigidbody:
   m_GameObject: {fileID: 391685994}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: .0500000007
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -194,7 +194,9 @@ GameObject:
   - 4: {fileID: 434944504}
   - 33: {fileID: 434944503}
   - 64: {fileID: 434944502}
+  - 65: {fileID: 434944506}
   - 23: {fileID: 434944501}
+  - 114: {fileID: 434944505}
   m_Layer: 4
   m_Name: Plane
   m_TagString: Untagged
@@ -230,7 +232,7 @@ MeshCollider:
   m_GameObject: {fileID: 434944500}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -254,6 +256,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &434944505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434944500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcab98488310b54ab97d542c5a58ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfTrackedObjects: []
+  _factor: 0
+  _test: 0
+  _force: {x: 0, y: 0, z: 0}
+--- !u!65 &434944506
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434944500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!1 &547753140
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,10 +376,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 596271643}
   - 33: {fileID: 596271642}
-  - 65: {fileID: 596271641}
   - 23: {fileID: 596271640}
   - 54: {fileID: 596271644}
   - 114: {fileID: 596271639}
+  - 65: {fileID: 596271641}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -364,7 +393,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 596271638}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a2841878914e489abe7d3a43a5e0578, type: 3}
   m_Name: 
@@ -439,7 +468,7 @@ Rigidbody:
   m_GameObject: {fileID: 596271638}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: .150000006
   m_UseGravity: 1
   m_IsKinematic: 1
@@ -456,8 +485,8 @@ GameObject:
   - 4: {fileID: 1104858530}
   - 33: {fileID: 1104858529}
   - 135: {fileID: 1104858528}
+  - 65: {fileID: 1104858531}
   - 23: {fileID: 1104858527}
-  - 114: {fileID: 1104858526}
   - 54: {fileID: 1104858525}
   m_Layer: 0
   m_Name: Sphere
@@ -473,30 +502,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1104858524}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 1.5
+  m_Drag: 1
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1104858526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1104858524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bcab98488310b54ab97d542c5a58ee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waterPlane: {fileID: 0}
-  test:
-    serializedVersion: 2
-    m_Bits: 0
-  layermask: 0
 --- !u!23 &1104858527
 Renderer:
   m_ObjectHideFlags: 0
@@ -548,3 +561,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!65 &1104858531
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104858524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.00000012, y: 1, z: 1.00000024}
+  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
