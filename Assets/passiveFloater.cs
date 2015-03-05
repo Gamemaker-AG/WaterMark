@@ -10,9 +10,6 @@ public class passiveFloater : MonoBehaviour
     public Dictionary<Collider, float> _originalDrag;
     public Dictionary<Collider, float> _volumeInformation;
     public List<GameObject> listOfTrackedObjects;
-    public float _factor;
-    public float _test;
-    public Vector3 _force;
 
     void Start()
     {
@@ -26,37 +23,34 @@ public class passiveFloater : MonoBehaviour
     void OnTriggerStay(Collider other)
     {
 
-        if (other.rigidbody != null)
+        //if (other.rigidbody != null)
+        //{
+        Vector3 force = -Physics.gravity * _volumeInformation[other];
+
+        float factor;
+        float test = other.transform.position.y - transform.position.y;
+
+        if (test > -other.bounds.extents.y)
         {
-            //GenericFloating(other, test);
-            float factor;
-            float test = other.transform.position.y - transform.position.y;
+            factor = 1 /
+                (other.bounds.size.y / (other.bounds.extents.y - test));
+            if (factor == 0) { factor = Mathf.Epsilon; }
 
-            if (test > -other.bounds.extents.y)
-            {
-                factor = 1 /
-                    (other.bounds.size.y / (other.bounds.extents.y - test));
-                if (factor == 0) { factor = Mathf.Epsilon; }
-
-                _factor = factor;
-                //Debug.Log("size.y = " + other.bounds.size.y);
-            }
-            else
-            {   //if the object is completly inside the water
-                factor = 1;
-
-                _factor = factor;
-            }
-
-            Vector3 force;
-            force = (-Physics.gravity * _volumeInformation[other] * factor); //TODO - foo
-
-            other.rigidbody.AddForce(force, ForceMode.Force);
-
-            _factor = factor;
-            _force = force;
-            _test = test;
+            force = (-Physics.gravity * _volumeInformation[other] * factor);
+            other.rigidbody.AddForceAtPosition(force, GetActionPoint(other.transform));
         }
+        else
+        {   //if the object is completly inside the water
+            other.rigidbody.AddForce(force, ForceMode.Force);
+        }
+        //}
+    }
+
+    private Vector3 GetActionPoint(Transform transform)
+    {
+        Bounds b = transform.GetComponent<MeshFilter>().mesh.bounds;
+
+        throw new System.NotImplementedException(); //TODO
     }
 
     void OnTriggerEnter(Collider other)
