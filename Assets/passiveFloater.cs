@@ -51,7 +51,7 @@ public class passiveFloater : MonoBehaviour
             Vector3 force;
             force = (-Physics.gravity * _volumeInformation[other] * factor); //TODO - foo
 
-            other.rigidbody.AddForce(force, ForceMode.Acceleration);
+            other.rigidbody.AddForce(force, ForceMode.Force);
 
             _factor = factor;
             _force = force;
@@ -78,6 +78,7 @@ public class passiveFloater : MonoBehaviour
         //_items.Remove(other);
         other.rigidbody.drag = _originalDrag[other];
         _originalDrag.Remove(other);
+        _volumeInformation.Remove(other);
         listOfTrackedObjects.Remove(other.gameObject);
     }
 

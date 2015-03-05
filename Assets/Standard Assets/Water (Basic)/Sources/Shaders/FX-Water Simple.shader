@@ -56,11 +56,9 @@ ENDCG
 // -----------------------------------------------------------
 // Fragment program
 
- Subshader {
-     Tags { "Queue"="Transparent" "RenderType" = "Transparent" }
-     Blend SrcAlpha OneMinusSrcAlpha
-     ColorMask RGB
-     Pass{
+Subshader {
+	Tags { "RenderType"="Opaque" }
+	Pass {
 
 CGPROGRAM
 #pragma vertex vert
